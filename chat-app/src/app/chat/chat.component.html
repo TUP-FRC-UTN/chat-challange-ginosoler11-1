@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <h2 class="text-center">Sala de Chat</h2>
+    <div class="border border-primary p-3 mb-4">
+      <h4>Conversación</h4>
+      <div class="mb-4">
+        <div *ngFor="let mensaje of mensajes">
+          <strong>{{ mensaje.usuario }}:</strong> {{ mensaje.texto }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <app-usuario 
+            [nombreUsuario]="'Pepe'" 
+            (nuevoMensaje)="agregarMensajePepe($event)">
+          </app-usuario>
+        </div>
+        <div class="col-md-6">
+          <app-usuario 
+            [nombreUsuario]="'María'" 
+            (nuevoMensaje)="agregarMensajeMaria($event)">
+          </app-usuario>
+        </div>
+      </div>
+    </div>
+  </div>
+  

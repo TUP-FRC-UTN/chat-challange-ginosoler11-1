@@ -1,0 +1,10 @@
+<div class="border border-success p-3 mb-3">
+    <h5>Usuario: {{ nombreUsuario }}</h5>
+    <div *ngFor="let mensaje of mensajes" class="mb-2">
+      {{ mensaje }}
+    </div>
+    <textarea ngSkipHydration class="form-control mb-2" rows="3" [(ngModel)]="mensajeActual" placeholder="Mensaje"></textarea>
+
+    <button class="btn btn-primary" (click)="enviarMensaje()">Guardar</button>
+  </div>
+  
